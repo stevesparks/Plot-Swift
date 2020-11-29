@@ -11,11 +11,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
+    lazy var activity = NSUserActivity(activityType: "Plot")
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         report("scene > \(scene.description) to session > \(session.description) options > \(connectionOptions)")
+
+        if let act = session.stateRestorationActivity {
+            activity = act
+        }
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = windowScene.windows.first
@@ -55,9 +61,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
+
+extension SceneDelegate {
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        report()
+        return activity
+    }
+}
+
 extension NSObject {
     func report(_ message: CustomStringConvertible = "", _ preamble: CustomStringConvertible = "", function: String = #function) {
         let fn = String(describing: type(of: self))
         print("--> \(preamble)\(fn) \(function) \(message) ")
+    }
+}
+
+extension UIViewController {
+    var sceneDelegate: SceneDelegate? {
+        return view.window?.windowScene?.delegate as? SceneDelegate
+    }
+    
+    open override var userActivity: NSUserActivity? {
+        get {
+            return sceneDelegate?.activity ?? super.userActivity
+        }
+        set {
+            
+        }
     }
 }
