@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E41CE07254F0032002A9A02 /* QuadraticFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41CE06254F0032002A9A02 /* QuadraticFormulaViewController.swift */; };
+		0E41CE11255022FF002A9A02 /* PossibleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41CE10255022FF002A9A02 /* PossibleValue.swift */; };
+		0E41CE1925502330002A9A02 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41CE1825502330002A9A02 /* Function.swift */; };
+		0E41CE1E255023B3002A9A02 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41CE1D255023B3002A9A02 /* Plot.swift */; };
+		0E41CE2625509F38002A9A02 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41CE2525509F38002A9A02 /* TabBarController.swift */; };
+		0E60B3822563DAE300FB0DC9 /* WaveformControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E60B3812563DAE300FB0DC9 /* WaveformControlView.xib */; };
+		0E60B3872563DAF900FB0DC9 /* WaveformControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60B3862563DAF900FB0DC9 /* WaveformControlView.swift */; };
+		0E60B38C2563E10700FB0DC9 /* ComplexWaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60B38B2563E10700FB0DC9 /* ComplexWaveViewController.swift */; };
+		0E6606D92542CB4300C3874F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6606D82542CB4300C3874F /* AppDelegate.swift */; };
+		0E6606DB2542CB4300C3874F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6606DA2542CB4300C3874F /* SceneDelegate.swift */; };
+		0E6606DD2542CB4300C3874F /* SineWaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */; };
+		0E6606E02542CB4300C3874F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6606DE2542CB4300C3874F /* Main.storyboard */; };
+		0E6606E22542CB4400C3874F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6606E12542CB4400C3874F /* Assets.xcassets */; };
+		0E6606E52542CB4400C3874F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */; };
+		0E6606F02542CB4400C3874F /* PlotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6606EF2542CB4400C3874F /* PlotTests.swift */; };
+		0E6606FB2542CB4400C3874F /* PlotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6606FA2542CB4400C3874F /* PlotUITests.swift */; };
+		0E66070C2542CB5300C3874F /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66070B2542CB5300C3874F /* PlotView.swift */; };
+		0E6607112542D39900C3874F /* PossibleValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6607102542D39900C3874F /* PossibleValueTests.swift */; };
+		0E699235254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */; };
+		0E894FBA254D68CD00575760 /* PlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E894FB9254D68CD00575760 /* PlotModel.swift */; };
+		0EB3AB4525547DED001553D2 /* WaveformGeneratorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AB4425547DED001553D2 /* WaveformGeneratorProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E6606EC2542CB4400C3874F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6606CD2542CB4300C3874F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6606D42542CB4300C3874F;
+			remoteInfo = Plot;
+		};
+		0E6606F72542CB4400C3874F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6606CD2542CB4300C3874F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6606D42542CB4300C3874F;
+			remoteInfo = Plot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E41CE06254F0032002A9A02 /* QuadraticFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadraticFormulaViewController.swift; sourceTree = "<group>"; };
+		0E41CE10255022FF002A9A02 /* PossibleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleValue.swift; sourceTree = "<group>"; };
+		0E41CE1825502330002A9A02 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		0E41CE1D255023B3002A9A02 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		0E41CE2525509F38002A9A02 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0E60B3812563DAE300FB0DC9 /* WaveformControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformControlView.xib; sourceTree = "<group>"; };
+		0E60B3862563DAF900FB0DC9 /* WaveformControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformControlView.swift; sourceTree = "<group>"; };
+		0E60B38B2563E10700FB0DC9 /* ComplexWaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWaveViewController.swift; sourceTree = "<group>"; };
+		0E6606D52542CB4300C3874F /* Plot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6606D82542CB4300C3874F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E6606DA2542CB4300C3874F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWaveViewController.swift; sourceTree = "<group>"; };
+		0E6606DF2542CB4300C3874F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E6606E12542CB4400C3874F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E6606E42542CB4400C3874F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E6606E62542CB4400C3874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6606EB2542CB4400C3874F /* PlotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6606EF2542CB4400C3874F /* PlotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotTests.swift; sourceTree = "<group>"; };
+		0E6606F12542CB4400C3874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6606F62542CB4400C3874F /* PlotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6606FA2542CB4400C3874F /* PlotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotUITests.swift; sourceTree = "<group>"; };
+		0E6606FC2542CB4400C3874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E66070B2542CB5300C3874F /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		0E6607102542D39900C3874F /* PossibleValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleValueTests.swift; sourceTree = "<group>"; };
+		0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadraticFormulaPlotter.swift; sourceTree = "<group>"; };
+		0E894FB9254D68CD00575760 /* PlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotModel.swift; sourceTree = "<group>"; };
+		0EB3AB4425547DED001553D2 /* WaveformGeneratorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformGeneratorProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E6606D22542CB4300C3874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606E82542CB4400C3874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606F32542CB4400C3874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E41CE0B255022CC002A9A02 /* Plot View */ = {
+			isa = PBXGroup;
+			children = (
+				0E66070B2542CB5300C3874F /* PlotView.swift */,
+			);
+			path = "Plot View";
+			sourceTree = "<group>";
+		};
+		0E41CE0F255022D8002A9A02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E41CE10255022FF002A9A02 /* PossibleValue.swift */,
+				0E41CE1825502330002A9A02 /* Function.swift */,
+				0E41CE1D255023B3002A9A02 /* Plot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E651E8425741C7B00FC8529 /* Quadratic */ = {
+			isa = PBXGroup;
+			children = (
+				0E894FB9254D68CD00575760 /* PlotModel.swift */,
+				0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */,
+				0E41CE06254F0032002A9A02 /* QuadraticFormulaViewController.swift */,
+			);
+			path = Quadratic;
+			sourceTree = "<group>";
+		};
+		0E651E8825741CE600FC8529 /* Complex */ = {
+			isa = PBXGroup;
+			children = (
+				0EB3AB4425547DED001553D2 /* WaveformGeneratorProvider.swift */,
+				0E60B38B2563E10700FB0DC9 /* ComplexWaveViewController.swift */,
+				0E60B3812563DAE300FB0DC9 /* WaveformControlView.xib */,
+				0E60B3862563DAF900FB0DC9 /* WaveformControlView.swift */,
+			);
+			path = Complex;
+			sourceTree = "<group>";
+		};
+		0E6606CC2542CB4300C3874F = {
+			isa = PBXGroup;
+			children = (
+				0E6606D72542CB4300C3874F /* Plot */,
+				0E6606EE2542CB4400C3874F /* PlotTests */,
+				0E6606F92542CB4400C3874F /* PlotUITests */,
+				0E6606D62542CB4300C3874F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E6606D62542CB4300C3874F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E6606D52542CB4300C3874F /* Plot.app */,
+				0E6606EB2542CB4400C3874F /* PlotTests.xctest */,
+				0E6606F62542CB4400C3874F /* PlotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E6606D72542CB4300C3874F /* Plot */ = {
+			isa = PBXGroup;
+			children = (
+				0E6606D82542CB4300C3874F /* AppDelegate.swift */,
+				0E6606DA2542CB4300C3874F /* SceneDelegate.swift */,
+				0E6606DE2542CB4300C3874F /* Main.storyboard */,
+				0E41CE0F255022D8002A9A02 /* Model */,
+				0E41CE0B255022CC002A9A02 /* Plot View */,
+				0E651E8825741CE600FC8529 /* Complex */,
+				0E651E8425741C7B00FC8529 /* Quadratic */,
+				0E6606E12542CB4400C3874F /* Assets.xcassets */,
+				0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */,
+				0E6606E62542CB4400C3874F /* Info.plist */,
+				0E41CE2525509F38002A9A02 /* TabBarController.swift */,
+				0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */,
+			);
+			path = Plot;
+			sourceTree = "<group>";
+		};
+		0E6606EE2542CB4400C3874F /* PlotTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E6606EF2542CB4400C3874F /* PlotTests.swift */,
+				0E6606F12542CB4400C3874F /* Info.plist */,
+				0E6607102542D39900C3874F /* PossibleValueTests.swift */,
+			);
+			path = PlotTests;
+			sourceTree = "<group>";
+		};
+		0E6606F92542CB4400C3874F /* PlotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E6606FA2542CB4400C3874F /* PlotUITests.swift */,
+				0E6606FC2542CB4400C3874F /* Info.plist */,
+			);
+			path = PlotUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E6606D42542CB4300C3874F /* Plot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6606FF2542CB4400C3874F /* Build configuration list for PBXNativeTarget "Plot" */;
+			buildPhases = (
+				0E6606D12542CB4300C3874F /* Sources */,
+				0E6606D22542CB4300C3874F /* Frameworks */,
+				0E6606D32542CB4300C3874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Plot;
+			packageProductDependencies = (
+			);
+			productName = Plot;
+			productReference = 0E6606D52542CB4300C3874F /* Plot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E6606EA2542CB4400C3874F /* PlotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6607022542CB4400C3874F /* Build configuration list for PBXNativeTarget "PlotTests" */;
+			buildPhases = (
+				0E6606E72542CB4400C3874F /* Sources */,
+				0E6606E82542CB4400C3874F /* Frameworks */,
+				0E6606E92542CB4400C3874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E6606ED2542CB4400C3874F /* PBXTargetDependency */,
+			);
+			name = PlotTests;
+			productName = PlotTests;
+			productReference = 0E6606EB2542CB4400C3874F /* PlotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E6606F52542CB4400C3874F /* PlotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6607052542CB4400C3874F /* Build configuration list for PBXNativeTarget "PlotUITests" */;
+			buildPhases = (
+				0E6606F22542CB4400C3874F /* Sources */,
+				0E6606F32542CB4400C3874F /* Frameworks */,
+				0E6606F42542CB4400C3874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E6606F82542CB4400C3874F /* PBXTargetDependency */,
+			);
+			name = PlotUITests;
+			productName = PlotUITests;
+			productReference = 0E6606F62542CB4400C3874F /* PlotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E6606CD2542CB4300C3874F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					0E6606D42542CB4300C3874F = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					0E6606EA2542CB4400C3874F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 0E6606D42542CB4300C3874F;
+					};
+					0E6606F52542CB4400C3874F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 0E6606D42542CB4300C3874F;
+					};
+				};
+			};
+			buildConfigurationList = 0E6606D02542CB4300C3874F /* Build configuration list for PBXProject "Plot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E6606CC2542CB4300C3874F;
+			packageReferences = (
+				0E894FB3254A139E00575760 /* XCRemoteSwiftPackageReference "xcodeproj" */,
+			);
+			productRefGroup = 0E6606D62542CB4300C3874F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E6606D42542CB4300C3874F /* Plot */,
+				0E6606EA2542CB4400C3874F /* PlotTests */,
+				0E6606F52542CB4400C3874F /* PlotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E6606D32542CB4300C3874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6606E52542CB4400C3874F /* LaunchScreen.storyboard in Resources */,
+				0E6606E22542CB4400C3874F /* Assets.xcassets in Resources */,
+				0E6606E02542CB4300C3874F /* Main.storyboard in Resources */,
+				0E60B3822563DAE300FB0DC9 /* WaveformControlView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606E92542CB4400C3874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606F42542CB4400C3874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E6606D12542CB4300C3874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E41CE1925502330002A9A02 /* Function.swift in Sources */,
+				0E699235254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift in Sources */,
+				0E41CE2625509F38002A9A02 /* TabBarController.swift in Sources */,
+				0E60B3872563DAF900FB0DC9 /* WaveformControlView.swift in Sources */,
+				0EB3AB4525547DED001553D2 /* WaveformGeneratorProvider.swift in Sources */,
+				0E6606DD2542CB4300C3874F /* SineWaveViewController.swift in Sources */,
+				0E41CE07254F0032002A9A02 /* QuadraticFormulaViewController.swift in Sources */,
+				0E6606D92542CB4300C3874F /* AppDelegate.swift in Sources */,
+				0E41CE11255022FF002A9A02 /* PossibleValue.swift in Sources */,
+				0E894FBA254D68CD00575760 /* PlotModel.swift in Sources */,
+				0E6606DB2542CB4300C3874F /* SceneDelegate.swift in Sources */,
+				0E41CE1E255023B3002A9A02 /* Plot.swift in Sources */,
+				0E60B38C2563E10700FB0DC9 /* ComplexWaveViewController.swift in Sources */,
+				0E66070C2542CB5300C3874F /* PlotView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606E72542CB4400C3874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6607112542D39900C3874F /* PossibleValueTests.swift in Sources */,
+				0E6606F02542CB4400C3874F /* PlotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6606F22542CB4400C3874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6606FB2542CB4400C3874F /* PlotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E6606ED2542CB4400C3874F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E6606D42542CB4300C3874F /* Plot */;
+			targetProxy = 0E6606EC2542CB4400C3874F /* PBXContainerItemProxy */;
+		};
+		0E6606F82542CB4400C3874F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E6606D42542CB4300C3874F /* Plot */;
+			targetProxy = 0E6606F72542CB4400C3874F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E6606DE2542CB4300C3874F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6606DF2542CB4300C3874F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6606E42542CB4400C3874F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E6606FD2542CB4400C3874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E6606FE2542CB4400C3874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E6607002542CB4400C3874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = Plot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Plot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E6607012542CB4400C3874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = Plot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Plot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0E6607032542CB4400C3874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = PlotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.PlotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plot.app/Plot";
+			};
+			name = Debug;
+		};
+		0E6607042542CB4400C3874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = PlotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.PlotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plot.app/Plot";
+			};
+			name = Release;
+		};
+		0E6607062542CB4400C3874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = PlotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.PlotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Plot;
+			};
+			name = Debug;
+		};
+		0E6607072542CB4400C3874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 439592V3LM;
+				INFOPLIST_FILE = PlotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.PlotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Plot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E6606D02542CB4300C3874F /* Build configuration list for PBXProject "Plot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6606FD2542CB4400C3874F /* Debug */,
+				0E6606FE2542CB4400C3874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6606FF2542CB4400C3874F /* Build configuration list for PBXNativeTarget "Plot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6607002542CB4400C3874F /* Debug */,
+				0E6607012542CB4400C3874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6607022542CB4400C3874F /* Build configuration list for PBXNativeTarget "PlotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6607032542CB4400C3874F /* Debug */,
+				0E6607042542CB4400C3874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6607052542CB4400C3874F /* Build configuration list for PBXNativeTarget "PlotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6607062542CB4400C3874F /* Debug */,
+				0E6607072542CB4400C3874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E894FB3254A139E00575760 /* XCRemoteSwiftPackageReference "xcodeproj" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tuist/xcodeproj";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.17.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 0E6606CD2542CB4300C3874F /* Project object */;
+}
