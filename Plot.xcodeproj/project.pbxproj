@@ -169,13 +169,13 @@
 				0E6606DE2542CB4300C3874F /* Main.storyboard */,
 				0E41CE0F255022D8002A9A02 /* Model */,
 				0E41CE0B255022CC002A9A02 /* Plot View */,
+				0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */,
 				0E651E8825741CE600FC8529 /* Complex */,
 				0E651E8425741C7B00FC8529 /* Quadratic */,
 				0E6606E12542CB4400C3874F /* Assets.xcassets */,
 				0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */,
 				0E6606E62542CB4400C3874F /* Info.plist */,
 				0E41CE2525509F38002A9A02 /* TabBarController.swift */,
-				0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */,
 			);
 			path = Plot;
 			sourceTree = "<group>";

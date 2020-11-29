@@ -16,6 +16,9 @@ class ComplexWaveViewController: UIViewController {
     let wave1 = WaveformGeneratorProvider()
     let wave2 = WaveformGeneratorProvider()
     
+    let w1 = WaveformControlView.fromNib()
+    let w2 = WaveformControlView.fromNib()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,14 +41,42 @@ class ComplexWaveViewController: UIViewController {
         plotView.backgroundColor = .black
         plotView.drawGridlines = false
         
-        let w1 = WaveformControlView.fromNib()
-        w1.control = wave1
         stackView.addArrangedSubview(w1)
-
-        let w2 = WaveformControlView.fromNib()
-        w2.control = wave2
         stackView.addArrangedSubview(w2)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        readValues()
+        wave1.delegate = self
+        wave2.delegate = self
+        w1.control = wave1
+        w2.control = wave2
+    }
 
+    func writeValues() {
+        report()
+        if let act = userActivity {
+            wave1.writeValuesToUserActivity("wave1", act)
+            wave2.writeValuesToUserActivity("wave2", act)
+        } else {
+            print("WELL WHY NOT")
+        }
+    }
+    
+    func readValues() {
+        report()
+        if let act = userActivity {
+            wave1.readValuesFromUserActivity("wave1", act)
+            wave2.readValuesFromUserActivity("wave2", act)
+        } else {
+            print("WELL WHY NOT")
+        }
+    }
+}
 
+extension ComplexWaveViewController: WaveformGeneratorProviderDelegate {
+    func waveformParametersChanged(_ provider: WaveformGeneratorProvider) {
+        writeValues()
+    }
 }

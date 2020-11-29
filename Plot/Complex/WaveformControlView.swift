@@ -27,21 +27,24 @@ class WaveformControlView: UIView {
     func populate(from control: WaveformGeneratorProvider) {
         intensitySlider.value = Float(control.intensity)
         rateSlider.value = Float(control.rate)
-        biasSlider.value = Float(control.center)
+        biasSlider.value = Float(control.bias)
         
-        intensityLabel.text = "\(control.intensity)"
-        rateLabel.text = "\(control.rate)"
-        biasLabel.text = "\(control.center)"
+        intensityLabel.text = "\(control.intensity.toThousands)"
+        rateLabel.text = "\(control.rate.toThousands)"
+        biasLabel.text = "\(control.bias.toThousands)"
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         switch sender {
         case intensitySlider: control?.intensity = Double(sender.value)
         case rateSlider: control?.rate = Double(sender.value)
-        case biasSlider: control?.center = Double(sender.value)
+        case biasSlider: control?.bias = Double(sender.value)
         default:
             print("weeeerd")
             break
+        }
+        if let control = control {
+            populate(from: control)
         }
     }
     

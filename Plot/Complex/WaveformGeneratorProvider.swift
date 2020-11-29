@@ -59,12 +59,17 @@ class MultiplexingProvider: PlotProvider {
     
 }
 
+protocol WaveformGeneratorProviderDelegate: class {
+    func waveformParametersChanged(_ provider: WaveformGeneratorProvider)
+}
+
 class WaveformGeneratorProvider {
     var values = [CGFloat]()
-    var maxNumberOfValues = 300 
+    var maxNumberOfValues = 320
+    var delegate: WaveformGeneratorProviderDelegate?
     
     var intensity = 0.4 { didSet { regen () } }
-    var center = 0.0 { didSet { regen () } }
+    var bias = 0.0 { didSet { regen () } }
     var rate = 0.01 { didSet { regen () } }
     
     var generator: CADisplayLink?
@@ -74,11 +79,12 @@ class WaveformGeneratorProvider {
         values.removeAll()
         for _ in 1...maxNumberOfValues {
             workingIndex += rate
-            let temp = Double(sin(workingIndex))
-            let newValue = (temp * intensity) + center
+            let temp = Double(sin(workingIndex + bias))
+            let newValue = (temp * intensity)
             values.append(CGFloat(newValue))
         }
         updater()
+        delegate?.waveformParametersChanged(self)
     }
     
     private var workingIndex = 0.0
@@ -91,8 +97,8 @@ class WaveformGeneratorProvider {
     @objc
     func nextValue() {
         workingIndex += rate
-        let temp = Double(sin(workingIndex))
-        let newValue = (temp * intensity) + center
+        let temp = Double(sin(workingIndex + bias))
+        let newValue = (temp * intensity)
         values.append(CGFloat(newValue))
         if values.count > maxNumberOfValues {
             values = Array(values.dropFirst())
@@ -111,3 +117,37 @@ extension WaveformGeneratorProvider: PlotProvider {
     }
 }
 
+
+
+
+
+extension WaveformGeneratorProvider {
+    enum ActivityKeys: String {
+        case intensity = "wave.phaseAngle"
+        case bias = "wave.plotDensity"
+        case rate = "wave.maxX"
+    }
+    
+    func writeValuesToUserActivity(_ prefix: String, _ act: NSUserActivity) {
+        act.userInfo?["\(prefix)-\(ActivityKeys.intensity.rawValue)"] =
+            ((intensity * 100.0).rounded(.toNearestOrAwayFromZero)) / 100.0
+        act.userInfo?["\(prefix)-\(ActivityKeys.rate.rawValue)"] =
+            ((rate * 100.0).rounded(.toNearestOrAwayFromZero)) / 100.0
+        act.userInfo?["\(prefix)-\(ActivityKeys.bias.rawValue)"] =
+            ((bias * 100).rounded(.toNearestOrAwayFromZero)) / 100.0
+        act.needsSave = true
+    }
+    
+    func readValuesFromUserActivity(_ prefix: String, _ act: NSUserActivity) {
+        if let tm = act.userInfo?["\(prefix)-\(ActivityKeys.intensity.rawValue)"] as? Double {
+            intensity = tm
+        }
+        if let pD = act.userInfo?["\(prefix)-\(ActivityKeys.rate.rawValue)"] as? Double {
+            rate = pD
+        }
+        if let max = act.userInfo?["\(prefix)-\(ActivityKeys.bias.rawValue)"] as? Double {
+            bias = max
+        }
+    }
+    
+}
