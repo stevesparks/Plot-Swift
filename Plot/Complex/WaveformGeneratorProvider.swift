@@ -117,10 +117,6 @@ extension WaveformGeneratorProvider: PlotProvider {
     }
 }
 
-
-
-
-
 extension WaveformGeneratorProvider {
     enum ActivityKeys: String {
         case intensity = "wave.phaseAngle"

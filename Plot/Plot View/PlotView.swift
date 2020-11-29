@@ -7,9 +7,11 @@
 
 import UIKit
 
-protocol PlotViewDelegate: class {
+@objc protocol PlotViewDelegate: class {
     func plotView(_ plotView: PlotView, didTap viewCoordinate: CGPoint, translatedPoint: CGPoint)
     func plotViewDidEndTap(_ plotView: PlotView)
+    
+    @objc optional func plotViewDidUpdate(_ plotView: PlotView)
 }
 
 class PlotView: UIView {
@@ -59,6 +61,7 @@ class PlotView: UIView {
                 drawRingCenteredOn(pt, setColor: setColor)
             }
         }
+        delegate?.plotViewDidUpdate?(self)
     }
     
     func drawLines(_ points: [CGPoint], ctx: CGContext, setColor: CGColor) {

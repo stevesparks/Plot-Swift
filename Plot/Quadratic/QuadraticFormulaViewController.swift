@@ -34,12 +34,16 @@ class QuadraticFormulaViewController: UIViewController {
         aSlider.value = 0.0
         bSlider.value = 1.0
         cSlider.value = 0.0
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        report()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        report()
         readValuesFromUserActivity()
     }
 

@@ -12,7 +12,9 @@ class ComplexWaveViewController: UIViewController {
     @IBOutlet weak var plotView: PlotView!
     
     var provider: PlotProvider!
-    
+    var labelX: CGFloat?
+    @IBOutlet weak var reportLabel: UILabel!
+
     let wave1 = WaveformGeneratorProvider()
     let wave2 = WaveformGeneratorProvider()
     
@@ -44,9 +46,24 @@ class ComplexWaveViewController: UIViewController {
         stackView.addArrangedSubview(w1)
         stackView.addArrangedSubview(w2)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        report()
+        
+        plotView.delegate = self
+    }
+    let nf: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.minimumFractionDigits = 3
+        nf.maximumFractionDigits = 3
+        return nf
+    }()
     
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        report()
         readValues()
         wave1.delegate = self
         wave2.delegate = self
@@ -80,3 +97,23 @@ extension ComplexWaveViewController: WaveformGeneratorProviderDelegate {
         writeValues()
     }
 }
+
+extension ComplexWaveViewController: PlotViewDelegate {
+    func plotView(_ plotView: PlotView, didTap viewCoordinate: CGPoint, translatedPoint: CGPoint) {
+        labelX = translatedPoint.x
+        plotView.highlightX = translatedPoint.x
+    }
+    func plotViewDidEndTap(_ plotView: PlotView) {
+        labelX = nil
+        reportLabel.text = nil
+        plotView.highlightX = nil
+    }
+    func plotViewDidUpdate(_ plotView: PlotView) {
+        if let tX = labelX {
+            let y = plotView.plot.yValue(for: tX).first
+            let yStr = nf.string(from: NSNumber(floatLiteral: Double(y)))!
+            reportLabel.text = "Y = \(yStr)"
+        }
+    }
+}
+

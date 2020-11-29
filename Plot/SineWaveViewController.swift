@@ -30,8 +30,14 @@ class SineWaveViewController: UIViewController {
         case maxX = "sineView.maxX"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        report()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        report()
         readValuesFromUserActivity()
     }
     
@@ -106,7 +112,12 @@ class SineWaveViewController: UIViewController {
         populate()
     }
     
-    let nf = NumberFormatter()
+    let nf: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.minimumFractionDigits = 3
+        nf.maximumFractionDigits = 3
+        return nf
+    }()
     
     @objc func linkFired(_ link: CADisplayLink) {
         plotView.setNeedsDisplay()

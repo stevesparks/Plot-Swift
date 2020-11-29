@@ -350,6 +350,7 @@
                     <tabBarItem key="tabBarItem" title="Complex" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="A2g-bF-0bv"/>
                     <connections>
                         <outlet property="plotView" destination="BVI-EL-J5u" id="JBD-lH-oSK"/>
+                        <outlet property="reportLabel" destination="kaJ-Sm-8RY" id="dg0-rT-OsD"/>
                         <outlet property="stackView" destination="jrd-dq-auq" id="bYs-cN-IUz"/>
                     </connections>
                 </viewController>

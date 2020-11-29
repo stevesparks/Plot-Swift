@@ -17,15 +17,23 @@ class TabBarController: UITabBarController {
         
         // Do any additional setup after loading the view.
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        report()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let act = userActivity {
-            
             if let idx = act.userInfo?[ActivityKeys.selectedTab.rawValue] as? Int {
-                report(String(describing: act.userInfo))
+                report("read selected tab from saved state")
                 selectedIndex = idx
+            } else {
+                report()
             }
+        } else {
+            report()
         }
     }
         
