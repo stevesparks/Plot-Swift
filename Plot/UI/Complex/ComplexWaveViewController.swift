@@ -86,6 +86,7 @@ class ComplexWaveViewController: UIViewController {
             wave2.readValuesFromUserActivity("wave2", act)
         }
     }
+    
 }
 
 extension ComplexWaveViewController: WaveformGeneratorProviderDelegate {

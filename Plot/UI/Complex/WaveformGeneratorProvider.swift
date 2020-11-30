@@ -144,6 +144,5 @@ extension WaveformGeneratorProvider {
         if let max = act.userInfo?["\(prefix)-\(ActivityKeys.bias.rawValue)"] as? Double {
             bias = max
         }
-    }
-    
+    }    
 }

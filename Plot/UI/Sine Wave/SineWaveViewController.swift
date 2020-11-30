@@ -16,11 +16,12 @@ class SineWaveViewController: UIViewController {
     @IBOutlet var maxXLabel: UILabel!
     @IBOutlet var plotView: PlotView!
     
-    @IBOutlet weak var phaseSlider: UISlider!
-    @IBOutlet weak var plotDensitySlider: UISlider!
-    @IBOutlet weak var maxXSlider: UISlider!
     @IBOutlet weak var reportLabel: UILabel!
     
+    @IBOutlet weak var phaseCSlider: CircularSlider!
+    @IBOutlet weak var plotDSlider: CircularSlider!
+    @IBOutlet weak var lambdaSlider: CircularSlider!
+
     var phaseAngle: CGFloat = 90.0
     
     var labelX: CGFloat?
@@ -33,9 +34,48 @@ class SineWaveViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        prepareSlider(phaseCSlider)
+        phaseCSlider.minimumValue = 0
+        phaseCSlider.maximumValue = 360
+
+        prepareSlider(plotDSlider)
+        plotDSlider.minimumValue = 0.0
+        plotDSlider.maximumValue = 200.0
+
+        prepareSlider(lambdaSlider)
+        lambdaSlider.minimumValue = 2.0
+        lambdaSlider.maximumValue = 100.0
+
         report()
     }
 
+    func prepareSlider(_ slider: CircularSlider) {
+        let c1 = UIColor(red: 0.9, green: 0.9, blue: 1.0, alpha: 1.0)
+        let c2 = UIColor.blue
+        slider.diskColor = .clear
+        slider.trackColor = c1
+        slider.thumbRadius = 5.0
+        slider.trackFillColor = c2
+        slider.endThumbTintColor = c2
+        slider.endThumbStrokeColor = c2
+        slider.addTarget(self, action: #selector(didMove(_:)), for: .valueChanged)
+    }
+    
+    @objc func didMove(_ slider: CircularSlider) {
+        switch slider {
+        case phaseCSlider:
+            phaseAngle = CGFloat(slider.endPointValue / 5.0).rounded() * 5.0
+        case plotDSlider:
+            plotView.plot.plotDensity = CGFloat(slider.endPointValue) / 100.0
+        case lambdaSlider:
+            plotView.plot.maxX = CGFloat(slider.endPointValue)
+        default: break
+        }
+        populate()
+        writeValuesToUserActivity()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         report()
@@ -55,13 +95,15 @@ class SineWaveViewController: UIViewController {
             return .multiple([yValue, yValue2])
         }
         plotView.delegate = self
-        phaseSlider.value = 90.0
-        plotDensitySlider.value = 0.01
-        maxXSlider.value = 10.0
         plotView.plot.maxX = 10.0
         plotView.plot.minY = -5.0
         plotView.plot.maxY = 5.0
         plotView.plot.plotDensity = 0.01
+
+        phaseCSlider.endPointValue = ((phaseAngle * 100.0).rounded(.toNearestOrAwayFromZero)) / 100.0
+        plotDSlider.endPointValue = (plotView.plot.plotDensity ?? 0.01) * 100
+        lambdaSlider.endPointValue = plotView.plot.maxX
+
         populate()
 
         let link = CADisplayLink(target: self, selector: #selector(linkFired(_:)))
@@ -76,7 +118,7 @@ class SineWaveViewController: UIViewController {
         let density = plotView.plot.plotDensity ?? 0.01
         let pd = ((density * 100.0).rounded(.toNearestOrAwayFromZero)) / 100.0
         plotDensityLabel.text = "pd = \(pd)"
-        
+
         let maxX = ((plotView.plot.maxX * 100).rounded(.toNearestOrAwayFromZero)) / 100.0
         maxXLabel.text = "maxX = \(maxX)"
     }
@@ -98,18 +140,18 @@ class SineWaveViewController: UIViewController {
         if let act = userActivity {
             if let tm = act.userInfo?[ActivityKeys.phaseAngle.rawValue] as? CGFloat {
                 phaseAngle = tm
-                phaseSlider.value = Float(tm)
             }
             if let pD = act.userInfo?[ActivityKeys.plotDensity.rawValue] as? CGFloat {
                 report("pD = \(pD)")
                 plotView.plot.plotDensity = pD
-                plotDensitySlider.value = Float(pD * 100)
             }
             if let max = act.userInfo?[ActivityKeys.maxX.rawValue] as? CGFloat {
                 plotView.plot.maxX = max
-                maxXSlider.value = Float(max)
             }
         }
+        phaseCSlider.endPointValue = ((phaseAngle * 100.0).rounded(.toNearestOrAwayFromZero)) / 100.0
+        plotDSlider.endPointValue = (plotView.plot.plotDensity ?? 0.01) * 100
+        lambdaSlider.endPointValue = plotView.plot.maxX
         populate()
     }
     
@@ -129,24 +171,7 @@ class SineWaveViewController: UIViewController {
             reportLabel.text = "X = \(xStr) Y = \(yStr)"
         }
     }
-    
-    @IBAction func timeSliderValueChanged(_ sender: UISlider) {
-        phaseAngle = CGFloat(sender.value / 5.0).rounded() * 5.0
-        populate()
-        writeValuesToUserActivity()
-    }
-    
-    @IBAction func plotDensitySliderValueChanged(_ sender: UISlider) {
-        plotView.plot.plotDensity = CGFloat(sender.value) / 100.0
-        populate()
-        writeValuesToUserActivity()
-    }
-    
-    @IBAction func xMaxSliderValueChanged(_ sender: UISlider) {
-        plotView.plot.maxX = CGFloat(sender.value)
-        populate()
-        writeValuesToUserActivity()
-    }
+
 }
 
 extension SineWaveViewController: PlotViewDelegate {
@@ -161,3 +186,6 @@ extension SineWaveViewController: PlotViewDelegate {
     }
 }
 
+//extension SineWaveViewController: MidPointCircularSliderDelegate {
+//    
+//}
