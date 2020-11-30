@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import HGCircularSlider
 
 fileprivate let DEG2RAD = 180.0 / CGFloat.pi
 class SineWaveViewController: UIViewController {
@@ -160,21 +161,3 @@ extension SineWaveViewController: PlotViewDelegate {
     }
 }
 
-
-extension CGFloat {
-    var toThousands: CGFloat {
-        return (self * 1000).rounded(.toNearestOrAwayFromZero) / 1000.0
-    }
-}
-
-extension Double {
-    var toThousands: Double {
-        return (self * 1000).rounded(.toNearestOrAwayFromZero) / 1000.0
-    }
-}
-
-extension Float {
-    var toThousands: Float {
-        return (self * 1000).rounded(.toNearestOrAwayFromZero) / 1000.0
-    }
-}

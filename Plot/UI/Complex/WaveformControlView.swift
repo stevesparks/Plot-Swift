@@ -40,7 +40,6 @@ class WaveformControlView: UIView {
         case rateSlider: control?.rate = Double(sender.value)
         case biasSlider: control?.bias = Double(sender.value)
         default:
-            print("weeeerd")
             break
         }
         if let control = control {

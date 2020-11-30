@@ -26,8 +26,10 @@
 		0E66070C2542CB5300C3874F /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66070B2542CB5300C3874F /* PlotView.swift */; };
 		0E6607112542D39900C3874F /* PossibleValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6607102542D39900C3874F /* PossibleValueTests.swift */; };
 		0E699235254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */; };
-		0E894FBA254D68CD00575760 /* PlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E894FB9254D68CD00575760 /* PlotModel.swift */; };
 		0EB3AB4525547DED001553D2 /* WaveformGeneratorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AB4425547DED001553D2 /* WaveformGeneratorProvider.swift */; };
+		0ED3DBB22574FA4600963E55 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3DBB12574FA4600963E55 /* Tools.swift */; };
+		0ED3DBBB2574FB5800963E55 /* SwipeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3DBBA2574FB5800963E55 /* SwipeyLabel.swift */; };
+		0ED3DBC42574FED100963E55 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED3DBC32574FED100963E55 /* HGCircularSlider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +75,9 @@
 		0E66070B2542CB5300C3874F /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 		0E6607102542D39900C3874F /* PossibleValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleValueTests.swift; sourceTree = "<group>"; };
 		0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadraticFormulaPlotter.swift; sourceTree = "<group>"; };
-		0E894FB9254D68CD00575760 /* PlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotModel.swift; sourceTree = "<group>"; };
 		0EB3AB4425547DED001553D2 /* WaveformGeneratorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformGeneratorProvider.swift; sourceTree = "<group>"; };
+		0ED3DBB12574FA4600963E55 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		0ED3DBBA2574FB5800963E55 /* SwipeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED3DBC42574FED100963E55 /* HGCircularSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +127,6 @@
 		0E651E8425741C7B00FC8529 /* Quadratic */ = {
 			isa = PBXGroup;
 			children = (
-				0E894FB9254D68CD00575760 /* PlotModel.swift */,
 				0E699234254EFE71008CA7E0 /* QuadraticFormulaPlotter.swift */,
 				0E41CE06254F0032002A9A02 /* QuadraticFormulaViewController.swift */,
 			);
@@ -164,18 +167,13 @@
 		0E6606D72542CB4300C3874F /* Plot */ = {
 			isa = PBXGroup;
 			children = (
+				0ED3DBB12574FA4600963E55 /* Tools.swift */,
 				0E6606D82542CB4300C3874F /* AppDelegate.swift */,
 				0E6606DA2542CB4300C3874F /* SceneDelegate.swift */,
-				0E6606DE2542CB4300C3874F /* Main.storyboard */,
 				0E41CE0F255022D8002A9A02 /* Model */,
-				0E41CE0B255022CC002A9A02 /* Plot View */,
-				0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */,
-				0E651E8825741CE600FC8529 /* Complex */,
-				0E651E8425741C7B00FC8529 /* Quadratic */,
+				0ED3DBAD2574F99300963E55 /* UI */,
 				0E6606E12542CB4400C3874F /* Assets.xcassets */,
-				0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */,
 				0E6606E62542CB4400C3874F /* Info.plist */,
-				0E41CE2525509F38002A9A02 /* TabBarController.swift */,
 			);
 			path = Plot;
 			sourceTree = "<group>";
@@ -199,6 +197,37 @@
 			path = PlotUITests;
 			sourceTree = "<group>";
 		};
+		0ED3DBAC2574F98000963E55 /* Sine Wave */ = {
+			isa = PBXGroup;
+			children = (
+				0E6606DC2542CB4300C3874F /* SineWaveViewController.swift */,
+			);
+			path = "Sine Wave";
+			sourceTree = "<group>";
+		};
+		0ED3DBAD2574F99300963E55 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0ED3DBB92574FB2600963E55 /* Views */,
+				0E6606E32542CB4400C3874F /* LaunchScreen.storyboard */,
+				0E6606DE2542CB4300C3874F /* Main.storyboard */,
+				0E41CE2525509F38002A9A02 /* TabBarController.swift */,
+				0ED3DBAC2574F98000963E55 /* Sine Wave */,
+				0E651E8825741CE600FC8529 /* Complex */,
+				0E651E8425741C7B00FC8529 /* Quadratic */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0ED3DBB92574FB2600963E55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E41CE0B255022CC002A9A02 /* Plot View */,
+				0ED3DBBA2574FB5800963E55 /* SwipeyLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +245,7 @@
 			);
 			name = Plot;
 			packageProductDependencies = (
+				0ED3DBC32574FED100963E55 /* HGCircularSlider */,
 			);
 			productName = Plot;
 			productReference = 0E6606D52542CB4300C3874F /* Plot.app */;
@@ -289,7 +319,7 @@
 			);
 			mainGroup = 0E6606CC2542CB4300C3874F;
 			packageReferences = (
-				0E894FB3254A139E00575760 /* XCRemoteSwiftPackageReference "xcodeproj" */,
+				0ED3DBC22574FED100963E55 /* XCRemoteSwiftPackageReference "HGCircularSlider" */,
 			);
 			productRefGroup = 0E6606D62542CB4300C3874F /* Products */;
 			projectDirPath = "";
@@ -341,10 +371,11 @@
 				0E60B3872563DAF900FB0DC9 /* WaveformControlView.swift in Sources */,
 				0EB3AB4525547DED001553D2 /* WaveformGeneratorProvider.swift in Sources */,
 				0E6606DD2542CB4300C3874F /* SineWaveViewController.swift in Sources */,
+				0ED3DBBB2574FB5800963E55 /* SwipeyLabel.swift in Sources */,
 				0E41CE07254F0032002A9A02 /* QuadraticFormulaViewController.swift in Sources */,
 				0E6606D92542CB4300C3874F /* AppDelegate.swift in Sources */,
 				0E41CE11255022FF002A9A02 /* PossibleValue.swift in Sources */,
-				0E894FBA254D68CD00575760 /* PlotModel.swift in Sources */,
+				0ED3DBB22574FA4600963E55 /* Tools.swift in Sources */,
 				0E6606DB2542CB4300C3874F /* SceneDelegate.swift in Sources */,
 				0E41CE1E255023B3002A9A02 /* Plot.swift in Sources */,
 				0E60B38C2563E10700FB0DC9 /* ComplexWaveViewController.swift in Sources */,
@@ -455,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -510,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -684,15 +715,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0E894FB3254A139E00575760 /* XCRemoteSwiftPackageReference "xcodeproj" */ = {
+		0ED3DBC22574FED100963E55 /* XCRemoteSwiftPackageReference "HGCircularSlider" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tuist/xcodeproj";
+			repositoryURL = "https://github.com/HamzaGhazouani/HGCircularSlider";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.17.0;
+				minimumVersion = 2.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ED3DBC32574FED100963E55 /* HGCircularSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED3DBC22574FED100963E55 /* XCRemoteSwiftPackageReference "HGCircularSlider" */;
+			productName = HGCircularSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E6606CD2542CB4300C3874F /* Project object */;
 }

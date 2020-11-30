@@ -76,8 +76,6 @@ class ComplexWaveViewController: UIViewController {
         if let act = userActivity {
             wave1.writeValuesToUserActivity("wave1", act)
             wave2.writeValuesToUserActivity("wave2", act)
-        } else {
-            print("WELL WHY NOT")
         }
     }
     
@@ -86,8 +84,6 @@ class ComplexWaveViewController: UIViewController {
         if let act = userActivity {
             wave1.readValuesFromUserActivity("wave1", act)
             wave2.readValuesFromUserActivity("wave2", act)
-        } else {
-            print("WELL WHY NOT")
         }
     }
 }

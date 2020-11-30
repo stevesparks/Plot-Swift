@@ -69,13 +69,6 @@ extension SceneDelegate {
     }
 }
 
-extension NSObject {
-    func report(_ message: CustomStringConvertible = "", _ preamble: CustomStringConvertible = "", function: String = #function) {
-        let fn = String(describing: type(of: self))
-        print("--> \(preamble)\(fn) \(function) \(message) ")
-    }
-}
-
 extension UIViewController {
     var sceneDelegate: SceneDelegate? {
         return view.window?.windowScene?.delegate as? SceneDelegate

@@ -188,13 +188,7 @@ extension Plot {
     func plotX(for pixelX: CGFloat, in rect: CGRect) -> CGFloat {
         guard maxX - minX > 0, rect.size.width > 0 else { return 0 }
         let pixelXPerPoint = rect.size.width / (maxX - minX)  // spread of X per screen point
-        print("rect width = \(rect.size.width)")
-        print("xSpread = \(maxX - minX)")
-        print("max x = \(maxX)")
-        print("pixelXPerPoint = \(pixelXPerPoint)")
-
         let val = minX + ((pixelX - rect.origin.x) / pixelXPerPoint)
-        print("val = \(val)")
         return nearestPlottableX(to: val)
     }
 
